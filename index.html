@@ -5,43 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Gojo Satoru - GitHub Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Basic reset */
+        /* Global Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+        /* Body Styling */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #121212;
-            color: white;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to bottom right, #2c3e50, #4ca1af);
+            color: #fff;
             text-align: center;
             padding: 50px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
             opacity: 0;
-            animation: fadeIn 1s forwards; /* Smooth fade-in effect */
+            animation: fadeIn 1.5s forwards; /* Smooth fade-in effect */
         }
 
+        /* Heading Styling */
         h1 {
-            color: #4a90e2;
-            font-size: 3rem;
+            font-size: 3.5rem;
+            color: #f39c12;
             margin-bottom: 20px;
-            transition: transform 0.3s ease-in-out; /* Hover effect transition */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease-in-out;
         }
 
         h1:hover {
             transform: scale(1.1); /* Zoom effect on hover */
         }
 
+        /* Paragraph Styling */
         p {
-            font-size: 1.2rem;
-            margin-top: 20px;
+            font-size: 1.5rem;
             opacity: 0;
             animation: fadeInText 2s forwards 0.5s; /* Fade-in for paragraph */
+            transition: opacity 0.5s ease;
+            margin-top: 20px;
         }
 
-        /* Smooth fade-in animation */
+        /* Button Styling */
+        .btn {
+            background-color: #f39c12;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #e67e22;
+            transform: scale(1.05); /* Hover effect for button */
+        }
+
+        /* Smooth Fade-In Animation */
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -51,7 +80,7 @@
             }
         }
 
-        /* Fade-in for the paragraph */
+        /* Fade-In for the paragraph */
         @keyframes fadeInText {
             from {
                 opacity: 0;
@@ -64,6 +93,7 @@
 </head>
 <body>
     <h1>Welcome to Gojo Satoru's Website!</h1>
-    <p>This is a simple GitHub Pages website with smooth transitions. Feel free to explore and customize it!</p>
+    <p>This is a beautifully decorated GitHub Pages website with smooth transitions and interactive elements. Explore and enjoy!</p>
+    <button class="btn">Explore More</button>
 </body>
 </html>
