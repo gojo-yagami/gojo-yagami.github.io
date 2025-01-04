@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gojo Satoru - GitHub Page</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            text-align: center;
+            padding: 50px;
+            opacity: 0;
+            animation: fadeIn 1s forwards; /* Smooth fade-in effect */
+        }
+
+        h1 {
+            color: #4a90e2;
+            font-size: 3rem;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease-in-out; /* Hover effect transition */
+        }
+
+        h1:hover {
+            transform: scale(1.1); /* Zoom effect on hover */
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-top: 20px;
+            opacity: 0;
+            animation: fadeInText 2s forwards 0.5s; /* Fade-in for paragraph */
+        }
+
+        /* Smooth fade-in animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Fade-in for the paragraph */
+        @keyframes fadeInText {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Gojo Satoru's Website!</h1>
+    <p>This is a simple GitHub Pages website with smooth transitions. Feel free to explore and customize it!</p>
+</body>
+</html>
