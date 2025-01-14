@@ -40,6 +40,38 @@
             border-radius: 10px;
         }
 
+        #input-container {
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            width: fit-content;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #phone-number {
+            font-size: 1rem;
+            padding: 10px;
+            width: 250px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #generate-btn {
+            font-size: 1rem;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background: #25D366;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #generate-btn:hover {
+            background: #1da851;
+        }
+
         footer {
             margin-top: 50px;
             padding: 20px;
@@ -52,7 +84,13 @@
 <body>
     <h1>Scan to Pair with WhatsApp</h1>
     <p>Use WhatsApp to scan the QR code and pair with our number.</p>
-    
+
+    <div id="input-container">
+        <input type="text" id="phone-number" placeholder="Enter phone number" />
+        <br>
+        <button id="generate-btn" onclick="generateQRCode()">Generate QR Code</button>
+    </div>
+
     <!-- WhatsApp QR Code Placeholder -->
     <div id="qr-container">
         <img id="qr-code" src="" alt="WhatsApp QR Code" />
@@ -64,8 +102,13 @@
 
     <script>
         // Function to generate the WhatsApp QR code for pairing
-        async function generateQRCode() {
-            const phoneNumber = "1234567890"; // Replace with the WhatsApp number you want to pair
+        function generateQRCode() {
+            const phoneNumber = document.getElementById("phone-number").value.trim();
+            if (!phoneNumber) {
+                alert("Please enter a valid phone number.");
+                return;
+            }
+
             const message = "Hello, I want to connect with you!"; // Optional: add a custom message to start the chat
 
             const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
@@ -73,9 +116,6 @@
             // Generating the QR code using the API
             document.getElementById("qr-code").src = `https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(url)}&size=300x300`;
         }
-
-        // Call the function to generate the QR code when the page loads
-        generateQRCode();
     </script>
 </body>
 </html>
