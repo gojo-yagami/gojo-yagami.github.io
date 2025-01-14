@@ -4,6 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WhatsApp Pairing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #25D366, #075E54);
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 50px;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin: 20px 0;
+        }
+
+        #qr-container {
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            width: fit-content;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #qr-code {
+            width: 300px;
+            height: 300px;
+            border-radius: 10px;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.2);
+            color: white;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
     <h1>Scan to Pair with WhatsApp</h1>
@@ -13,6 +57,10 @@
     <div id="qr-container">
         <img id="qr-code" src="" alt="WhatsApp QR Code" />
     </div>
+
+    <footer>
+        &copy; 2025 WhatsApp Pairing Service. All Rights Reserved.
+    </footer>
 
     <script>
         // Function to generate the WhatsApp QR code for pairing
